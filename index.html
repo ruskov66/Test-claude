@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonjour ruskov66</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #6c5ce7;
+      transition: background-color 0.6s ease;
+    }
+
+    h1 {
+      color: white;
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 0 16px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      color: #333;
+      background-color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Bonjour, je m'appelle ruskov66</h1>
+  <button id="bouton">Changer la couleur</button>
+
+  <script>
+    // Liste de jolies couleurs
+    const couleurs = ["#6c5ce7", "#00b894", "#e17055", "#0984e3", "#e84393", "#fdcb6e", "#00cec9"];
+    let index = 0;
+
+    // Quand on clique sur le bouton, on passe à la couleur suivante
+    document.getElementById("bouton").addEventListener("click", function () {
+      index = (index + 1) % couleurs.length;
+      document.body.style.backgroundColor = couleurs[index];
+    });
+  </script>
+</body>
+</html>
